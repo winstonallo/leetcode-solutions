@@ -16,7 +16,7 @@ public:
             return;
         path ^= (1 << root->val);
         if (root->left == NULL && root->right == NULL){
-            if ((path & (path - 1)) == 0)
+            if ((path & (path - 1)) == 0)//pls dont ask why
                 counter++;
             return;
         }

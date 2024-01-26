@@ -13,7 +13,8 @@
        (i / 2 == i >> 1)
        ```
        therefore, **ans[i / 2]** is the same as the count of set bits in **i** minus the least significant one.
-       -**(i & 1)** checks whether **i** is odd or even, effectively checking its least significant bit and adding it to the current dp index.
+
+     -**(i & 1)** checks whether **i** is odd or even, effectively checking its least significant bit and adding it to the current dp index.
      
 
 

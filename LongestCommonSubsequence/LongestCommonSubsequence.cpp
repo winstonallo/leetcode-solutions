@@ -6,9 +6,9 @@ public:
         vector <vector <int>> dp(oneLen + 1, vector <int> (twoLen + 1, 0));
         for (int i = 1; i <= oneLen; i++){
             for (int j = 1; j <= twoLen; j++){
-                if (text1[i - 1] == text2[j - 1])//can we extend the longest common subsequence? if yes increment current dp array index
+                if (text1[i - 1] == text2[j - 1])
                     dp[i][j] = dp[i - 1][j - 1] + 1;
-                else //else skip current char of either text1 or text2
+                else 
                     dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
             }
         }

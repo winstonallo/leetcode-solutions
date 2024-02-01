@@ -6,7 +6,7 @@ class Solution {
             int n = tokens.size();
 
             for (int i = 0; i < n; i++) {
-                if (operand(tokens[i])) {
+                if (operand(tokens[i]) == true) {
                     int num2 = stk.top();
                     stk.pop();
                     int num1 = stk.top();

@@ -3,7 +3,7 @@ class Solution:
         rev = "".join(reversed(str))
         for i in range(0, len(str)):
             if str[i] != rev[i]:
-                return False;
+                return False
         return True
 
     def firstPalindrome(self, words: List[str]) -> str:

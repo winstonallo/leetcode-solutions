@@ -3,27 +3,16 @@ class Solution
     public:
         int findMinArrowShots(vector<vector<int>>& points) 
         {
-            int arrows = 1, current_max_x = 0, n = points.size();
-
-            if (n == 0)
-            {
-                return 0;
-            }
+            int arrows = 0, current_max_x = INT_MIN;
 
             std::sort(points.begin(), points.end(), &Solution::cmp);
 
-            current_max_x = points[0][1];
-            
-            for (size_t i = 1; i < n; i++)
+            for (const auto& it : points)
             {
-                if (points[i][0] <= current_max_x)
-                {
-                    continue ;
-                }
-                else
+                if (it[0] > current_max_x || current_max_x == INT_MIN)
                 {
                     arrows++;
-                    current_max_x = points[i][1];
+                    current_max_x = it[1];
                 }
             }
             return arrows;         

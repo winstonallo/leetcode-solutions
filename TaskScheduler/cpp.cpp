@@ -3,7 +3,7 @@ class Solution
     public:
         int leastInterval(vector<char>& tasks, int n) 
         {
-            int max_frequency = 0, elements_with_max_frequency = 0, total_jobs = tasks.size();
+            int max_frequency = 0, elements_with_max_frequency = 0;
             vector <int> map(26, 0);
 
             for (const auto& c : tasks)

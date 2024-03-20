@@ -7,7 +7,7 @@ class Solution
             
             for (int i = 0; i <= b; i++) 
             {
-                if (i == a-1) 
+                if (i == a - 1) 
                 {
                     a_prev = b_post;
                 }

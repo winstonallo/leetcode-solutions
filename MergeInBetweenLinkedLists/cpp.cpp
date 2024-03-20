@@ -7,8 +7,14 @@ class Solution
             
             for (int i = 0; i <= b; i++) 
             {
-                if (i == a-1) a_prev = b_post;
-                if (i != b) b_post = b_post->next;
+                if (i == a-1) 
+                {
+                    a_prev = b_post;
+                }
+                if (i != b)
+                {
+                    b_post = b_post->next;
+                }
             }
             
             a_prev->next = list2;
